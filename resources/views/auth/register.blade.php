@@ -33,7 +33,6 @@
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                     name="email" value="{{ old('email') }}" required autocomplete="email">
-
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -73,6 +72,7 @@
                                 }}</label>
                             <div class="col-md-6">
                                 <select name="role" id="role" class="form-control @error('role') is-invalid @enderror">
+                                    <option value="">-- Select role</option>
                                     <option value="1">Super Admin</option>
                                     <option value="2">Admin</option>
                                     <option value="3">Simple User</option>
