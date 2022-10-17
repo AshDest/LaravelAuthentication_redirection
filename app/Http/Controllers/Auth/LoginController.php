@@ -31,9 +31,9 @@ class LoginController extends Controller
     protected function redirectTo()
     {
         if (auth()->user()->role == '1') {
-            return '/admin';
+            return route('admin');
         }
-        return '/home';
+        return route('home');
     }
     /**
      * Create a new controller instance.
