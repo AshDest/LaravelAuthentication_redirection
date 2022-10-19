@@ -30,11 +30,12 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-        if (auth()->user()->role == '1') {
-            dd('dest');
-            return redirect(RouteServiceProvider::ADMIN);
-        }
 
+        if (auth()->user()->role == '1') {
+            // dd(route('admin'));
+            return redirect()->route('admin');
+        }
+        return null;
         // return route('home');
     }
     /**
