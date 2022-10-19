@@ -33,6 +33,7 @@ class RedirectIfAuthenticated
                 }
                 // to user dashboard
                 else if ($user->hasRole('2')) {
+                    dd('home');
                     return redirect(route('home'));
                 }
             }

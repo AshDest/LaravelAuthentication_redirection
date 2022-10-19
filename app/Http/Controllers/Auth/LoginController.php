@@ -31,10 +31,11 @@ class LoginController extends Controller
     protected function redirectTo()
     {
         if (auth()->user()->role == '1') {
-            dd(redirect(RouteServiceProvider::ADMIN));
+            dd('dest');
             return redirect(RouteServiceProvider::ADMIN);
         }
-        return route('home');
+
+        // return route('home');
     }
     /**
      * Create a new controller instance.
